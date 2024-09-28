@@ -14,7 +14,6 @@ export default function RootLayout({ children }) {
       <body className={vazir.className}>
         <Header />
         {children}
-        <Footer />
       </body>
     </html>
   );

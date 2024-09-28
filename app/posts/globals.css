@@ -17,7 +17,7 @@
 
 section {
   padding: 60px 50px;
-  height: 100vh;
+  height: auto;
 }
 
 body {
@@ -39,17 +39,14 @@ body {
   padding-left: 2%;
 }
 
-.post img {
-  width: 30%;
+.post img,
+video {
+  width: 400px;
   object-fit: cover;
   border-radius: 10px;
 }
 
-.post video {
-  width: 30%;
-  object-fit: cover;
-  border-radius: 10px;
-}
+
 
 .post_info {
   width: 70%;
@@ -67,10 +64,14 @@ body {
 }
 
 .post_info p {
+  width: 60%;
   color: var(--withe);
   margin-bottom: 15px;
-  overflow-x: hidden;
+  overflow: hidden;
+  text-wrap: wrap;
+  overflow-y: scroll;
 }
+
 
 .post_info p::-webkit-scrollbar {
   overflow-x: hidden;
@@ -111,13 +112,15 @@ body {
   color: var(--withe);
 }
 
-.icon_heart{
+.icon_heart {
   color: var(--red);
 }
-.icon_comment{
+
+.icon_comment {
   color: rgb(0, 117, 252);
   margin-right: 3px;
 }
+
 .post_info div>span {
   padding-top: 3px;
   color: var(--withe);

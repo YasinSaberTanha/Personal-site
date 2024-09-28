@@ -1,5 +1,7 @@
 "use client"
+
 import { useEffect, useRef } from "react"
+
 export default function FooterText({ footerText }) {
     const matlabRef = useRef()
 
@@ -8,5 +10,4 @@ export default function FooterText({ footerText }) {
     }, [])
 
     return (<div ref={matlabRef} className="matlab"></div>)
-
 }

@@ -4,20 +4,10 @@ import "./globals.css";
 import { vazir } from "../fonts/font";
 import Footer from "../layout/footer/footer";
 import { ToastContainer } from "react-toastify";
+import DataSettings from "../layout/dataSetting/settings";
 
 
-
-async function getSetting() {
-  try {
-    const data = await fetch("http://localhost/payam/-/server/getSettings/", { cache: "force-cache" })
-      .then(res => res.json())
-
-    return data
-  } catch (err) {
-    console.log(err);
-  }
-}
-const setting = await getSetting()
+const setting = await DataSettings()
 
 
 export const metadata = {
