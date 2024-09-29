@@ -20,7 +20,7 @@ if (boolval($user_jwt) && $user_jwt == "admin") {
         move_uploaded_file($_FILES["file"]["tmp_name"], $path);
 
         API(
-            "INSERT INTO `posts` (title, description, date_create, type, mode, file)  VALUES (?,?,?,?,?,?)",
+            "INSERT INTO `posts` (title, description, date_create, type, mode, file)  VALUES (?,?,?,?,?,?);",
             [$_POST["title"], $_POST["description"], date("Y-n-j"), $_POST["type"], $_POST["mode"], $namefaile,]
         );
     } else {

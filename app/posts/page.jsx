@@ -9,10 +9,6 @@ export default async function Posts() {
       const data = await fetch("http://localhost/payam/-/server/getPosts/", { cache: "no-store" })
       const posts = await data.json()
 
-
-
-      console.log(posts);
-
       const renderPosts = posts.map((post) => (post.type == "image" ? <PostImage post={post} /> : <PostVideo post={post} />))
       return renderPosts
     }

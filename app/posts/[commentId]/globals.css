@@ -104,7 +104,7 @@ body {
   margin-bottom: 10px;
 }
 
-.div_caht_viwe  {
+.div_caht_viwe {
   background-color: #5caa44;
   width: fit-content;
   max-width: 55%;
@@ -113,6 +113,7 @@ body {
 }
 
 .replay {
+  padding: 0 3px;
   padding-left: 5px;
   margin-bottom: 10px;
   border-radius: 5px;
@@ -122,6 +123,58 @@ body {
   overflow: hidden;
   background-color: #4a8837;
 }
+
+.send_caht_replay {
+  display: flex;
+  align-items: center;
+  left: 5px;
+  bottom: 45px;
+  position: absolute;
+  width: calc(100% - 10px);
+  height: 55px;
+  background-color: var(--withe);
+  border-radius: 10px 10px 0 0;
+  padding: 0px 10px 10px 20px;
+  animation: send_caht_replay 0.3s ease;
+}
+
+@keyframes send_caht_replay {
+  0% {
+    bottom: 10px;
+  }
+
+  100% {
+    bottom: 45px;
+  }
+}
+
+.replay_close {
+  height: 100%;
+  width: 40px;
+}
+
+.send_caht_replay span {
+  width: calc(100% - 40px);
+  text-wrap: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

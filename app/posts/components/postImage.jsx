@@ -5,6 +5,8 @@ import Image from "next/image";
 import Link from "next/link";
 
 export default async function PostImage({ post }) {
+    
+
     const vertical = {
         height: "400px", width: "230px", margin: "0px auto 40px 0px"
     }
@@ -20,7 +22,7 @@ export default async function PostImage({ post }) {
                     <p ><b>{post.description}</b></p>
                     <div>
                         <button><span><b>{post.likes}</b></span><FaHeart className="icon_heart" /></button>
-                        <Link className="link_comment" href={"posts/12"}><span><b>3</b></span><FaComment className="icon_comment" /></Link>
+                        <Link className="link_comment" href={`posts/${post.post_id}`}><span><b>{post.comment}</b></span><FaComment className="icon_comment" /></Link>
                         <span><b>{post.date_create}</b></span>
                     </div>
                 </div>
